@@ -15,7 +15,7 @@ const experiences = [
     bullets: [
       "Architected and deployed a **RAG-based enterprise chatbot** using **LangGraph + LangChain**, enabling teams to query Confluence documentation in natural language cutting knowledge lookup time by over 60%.",
       "Engineered end-to-end **document ingestion pipelines**  chunking, vector embedding (**FAISS**), and semantic retrieval processing 500+ pages of enterprise architecture documentation.",
-      "Designed and delivered **15+ Azure integration solutions** connecting Service Bus, Event Hubs, IBM MQ, SharePoint, and Blob Storage using **Azure Functions (C#/.NET)** for Royal Mail's middleware platform.",
+      "Designed and delivered **15+ Azure integration solutions** connecting Service Bus, Event Hubs, IBM MQ, SharePoint, and Blob Storage using **Azure Functions (C#/.NET)** — all deployed to production with **zero escalations**.",
       "Developed **timer-trigger & HTTP-trigger Function Apps** for high-throughput message routing (IBM MQ ↔ Event Hub, SharePoint → Blob Storage), handling thousands of daily transactions.",
       "Built and secured **REST APIs in Azure API Management** with Basic Auth, JWT token-based authentication, and OAuth 2.0 flows for cross-platform service communication.",
       "Led the **migration of .NET 6 Function Apps to .NET 8**, improving runtime performance and long-term support; contributed to **Tivoli system upgrades** across Linux & AIX servers.",
