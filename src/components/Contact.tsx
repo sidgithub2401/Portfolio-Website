@@ -111,7 +111,7 @@ export default function Contact() {
             <div className="flex gap-3 mt-6">
               {[
                 { href: "https://github.com/sidgithub2401", icon: <FaGithub />, label: "GitHub" },
-                { href: "https://linkedin.com/in/siddhant-sharma", icon: <FaLinkedinIn />, label: "LinkedIn" },
+                { href: "https://www.linkedin.com/in/siddhant-sharma-b945881bb", icon: <FaLinkedinIn />, label: "LinkedIn" },
               ].map((s, i) => (
                 <motion.a
                   key={s.label}

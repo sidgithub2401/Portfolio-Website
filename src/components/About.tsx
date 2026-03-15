@@ -77,7 +77,10 @@ export default function About() {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 mb-12">
+          {/* Text */}
           <AnimatedSection>
+
+
             <div className="space-y-5">
               {[
                 <>

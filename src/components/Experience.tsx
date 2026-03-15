@@ -8,19 +8,21 @@ import TextReveal from "./TextReveal";
 const experiences = [
   {
     company: "Capgemini",
-    role: "AI/ML Developer — Royal Mail Group",
+    role: "Software Engineer — Royal Mail Group (UK)",
     location: "Pune, India",
     date: "May 2024 – Present",
     current: true,
     bullets: [
-      "Architected and developed a production-style **RAG-based enterprise chatbot** using LangGraph for stateful workflow orchestration and multi-step reasoning.",
-      "Implemented document ingestion, chunking, embedding generation, and semantic indexing of Confluence documentation and platform architecture assets.",
-      "Integrated vector similarity search (**FAISS/Pinecone**) with LLM APIs to deliver domain-specific, retrieval-augmented answers.",
-      "Designed **tool-enabled agent workflows** supporting web search integration and email automation, including dynamic draft generation and secure email dispatch.",
-      "Built graph-based routing logic to dynamically switch between retrieval, web search, and communication tools based on user intent.",
-      "Improved team knowledge accessibility and reduced documentation lookup time through AI-powered architecture assistance.",
+      "Architected and deployed a **RAG-based enterprise chatbot** using **LangGraph + LangChain**, enabling teams to query Confluence documentation in natural language cutting knowledge lookup time by over 60%.",
+      "Engineered end-to-end **document ingestion pipelines**  chunking, vector embedding (**FAISS**), and semantic retrieval processing 500+ pages of enterprise architecture documentation.",
+      "Designed and delivered **15+ Azure integration solutions** connecting Service Bus, Event Hubs, IBM MQ, SharePoint, and Blob Storage using **Azure Functions (C#/.NET)** for Royal Mail's middleware platform.",
+      "Developed **timer-trigger & HTTP-trigger Function Apps** for high-throughput message routing (IBM MQ ↔ Event Hub, SharePoint → Blob Storage), handling thousands of daily transactions.",
+      "Built and secured **REST APIs in Azure API Management** with Basic Auth, JWT token-based authentication, and OAuth 2.0 flows for cross-platform service communication.",
+      "Led the **migration of .NET 6 Function Apps to .NET 8**, improving runtime performance and long-term support; contributed to **Tivoli system upgrades** across Linux & AIX servers.",
+      "Automated end-to-end **CI/CD pipelines using Azure DevOps** for integration services enabling zero-downtime deployments and faster release cycles.",
+      "Self-directed learning of **Python, Generative AI, LangChain, LangGraph, FastAPI, and ML algorithms** in parallel with project responsibilities, transitioning skill set toward AI/ML engineering.",
     ],
-    tech: ["Python", "LangChain", "LangGraph", "FastAPI", "Azure Functions", "GitHub Copilot Agents"],
+    tech: ["Python", "LangChain", "LangGraph", "C#", ".NET", "Azure Functions", "Azure API Management", "Azure DevOps", "IBM MQ", "Service Bus", "Event Hubs", "FastAPI"],
   },
 ];
 

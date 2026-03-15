@@ -2,10 +2,67 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { FaBrain, FaRobot, FaCogs, FaFilm, FaCar, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaBrain, FaRobot, FaCogs, FaFilm, FaCar, FaExternalLinkAlt, FaGithub, FaPen, FaTasks } from "react-icons/fa";
 import TextReveal from "./TextReveal";
 
 const projects = [
+  {
+    icon: <FaRobot />,
+    title: "LangGraph Multi-Tool AI Agent Chatbot",
+    category: "Multi-Tool AI Agent",
+    date: "2026",
+    description:
+      "Stateful conversational AI agent built with LangGraph featuring multi-tool orchestration, graph-based execution flows, and conversation memory for complex multi-turn interactions.",
+    highlights: [
+      "Dynamic routing between LLM, tools & memory",
+      "Graph-based multi-step reasoning pipeline",
+      "Deployed live on Streamlit Cloud",
+    ],
+    tech: ["LangGraph", "LangChain", "OpenAI API", "Streamlit", "Python"],
+    github: "https://github.com/sidgithub2401/LangGraph-Multi-Tool-AI-Agent-Chatbot",
+    live: "https://langgraph-multi-tool-ai-agent-chatbot-c9wpe5bekranqjw2p5yasq.streamlit.app/",
+    gradient: "from-indigo-500/20 to-violet-500/10",
+    iconColor: "text-indigo-500",
+    iconBg: "bg-indigo-500/10",
+  },
+  {
+    icon: <FaPen />,
+    title: "LangGraph Blog Writing Agent",
+    category: "AI Content Generation Agent",
+    date: "2026",
+    description:
+      "An AI-powered blog writing agent using LangGraph for automated, structured content generation with research, drafting, and editing workflows orchestrated through graph-based pipelines.",
+    highlights: [
+      "Automated research-to-draft pipeline",
+      "LangGraph state machine orchestration",
+      "Live Streamlit web application",
+    ],
+    tech: ["LangGraph", "LangChain", "OpenAI API", "Streamlit", "Python"],
+    github: "https://github.com/sidgithub2401/Langraph_Blog_Writing_Agent",
+    live: "https://langraphblogwritingagent-fkvpkhkpwdzphqtt6mppb7.streamlit.app/",
+    gradient: "from-cyan-500/20 to-blue-500/10",
+    iconColor: "text-cyan-500",
+    iconBg: "bg-cyan-500/10",
+  },
+  {
+    icon: <FaTasks />,
+    title: "FastAPI Task Management System",
+    category: "Full-Stack Web Application",
+    date: "2026",
+    description:
+      "A full-stack task management system with FastAPI backend featuring JWT authentication, CRUD operations, and a modern frontend. Deployed on Render with secure auth flows.",
+    highlights: [
+      "JWT-based authentication & authorization",
+      "RESTful API with FastAPI & Pydantic",
+      "Full-stack deployment on Render",
+    ],
+    tech: ["FastAPI", "Python", "JWT Auth", "REST API", "Render"],
+    github: "https://github.com/sidgithub2401/FAST-API-Task-Management-System-Auth-",
+    live: "https://fast-api-frontend-task.onrender.com/",
+    gradient: "from-emerald-500/20 to-teal-500/10",
+    iconColor: "text-emerald-500",
+    iconBg: "bg-emerald-500/10",
+  },
   {
     icon: <FaBrain />,
     title: "Customer Churn Prediction",
@@ -24,42 +81,8 @@ const projects = [
     iconBg: "bg-amber-500/10",
   },
   {
-    icon: <FaRobot />,
-    title: "RAG-Based LLM Chatbot",
-    category: "LangGraph Multi-Step Reasoning",
-    date: "2026",
-    description:
-      "Stateful conversational AI using LangGraph for multi-step reasoning and tool orchestration with graph-based execution flows and conversation memory for multi-turn context.",
-    highlights: [
-      "Dynamic routing between LLM, tools & memory",
-      "Structured output parsing & function-calling",
-      "Modular prompt template architecture",
-    ],
-    tech: ["LangGraph", "LangChain", "OpenAI API", "FAISS", "Python"],
-    gradient: "from-indigo-500/20 to-violet-500/10",
-    iconColor: "text-indigo-500",
-    iconBg: "bg-indigo-500/10",
-  },
-  {
-    icon: <FaCogs />,
-    title: "LLM Workflow Automation",
-    category: "AI-Driven Task Execution",
-    date: "Jun 2025",
-    description:
-      "LLM-powered automation pipelines for email parsing, response generation, and decision workflows. Integrated OpenAI APIs with external systems for structured task execution.",
-    highlights: [
-      "End-to-end AI-driven communication",
-      "Prompt templates & output validation",
-      "Reduced manual effort significantly",
-    ],
-    tech: ["OpenAI API", "Python", "LangChain", "Automation"],
-    gradient: "from-cyan-500/20 to-blue-500/10",
-    iconColor: "text-cyan-500",
-    iconBg: "bg-cyan-500/10",
-  },
-  {
     icon: <FaFilm />,
-    title: "Recommendation System",
+    title: "Netflix Recommendation System",
     category: "NLP-Powered Content Matching",
     date: "Jun 2025",
     description:
@@ -70,6 +93,8 @@ const projects = [
       "Precision@K performance evaluation",
     ],
     tech: ["TF-IDF", "NLP", "Scikit-learn", "Python"],
+    github: "https://github.com/sidgithub2401/Netflix-Recommendation-System",
+    live: "https://netflix-recommendation-system-uhanyldw5syj2kphqq8bce.streamlit.app/",
     gradient: "from-pink-500/20 to-rose-500/10",
     iconColor: "text-pink-500",
     iconBg: "bg-pink-500/10",
@@ -87,7 +112,7 @@ const projects = [
       "IEEE published research paper",
     ],
     tech: ["YOLOv8", "EasyOCR", "Computer Vision", "Python"],
-    link: "https://ieeexplore.ieee.org/document/10307420",
+    live: "https://ieeexplore.ieee.org/document/10307420",
     gradient: "from-emerald-500/20 to-teal-500/10",
     iconColor: "text-emerald-500",
     iconBg: "bg-emerald-500/10",
@@ -160,14 +185,26 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
             {project.icon}
           </motion.div>
           <div className="flex items-center gap-3">
-            {project.link && (
+            {project.github && (
               <motion.a
                 whileHover={{ scale: 1.2 }}
-                href={project.link}
+                href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[var(--text-muted)] hover:text-indigo-500 transition-colors"
-                aria-label="View project"
+                aria-label="View source code"
+              >
+                <FaGithub />
+              </motion.a>
+            )}
+            {project.live && (
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--text-muted)] hover:text-indigo-500 transition-colors"
+                aria-label="View live site"
               >
                 <FaExternalLinkAlt />
               </motion.a>
